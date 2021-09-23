@@ -158,8 +158,23 @@ int main()
 		forCramer(temp, n, x, fun, d, i);
 	}
 
-	double value; cin >> value;
-	cout << P(x, n, value);
+	double* arrVal = new double[5];
+	double counter = 0;
+	for (int i = 0; i < 5; i++)
+	{
+		arrVal[i] = counter;
+		cout << counter << "  ";
+		counter += 0.5;
+	}
+	cout << endl;
+
+	for (int i = 0; i < 5; i++)
+	{
+		cout << P(x, n, arrVal[i]) << "  ";
+	}
+	
+	//double value; cin >> value;
+	//cout << P(x, n, value);
 
 	return 0;
 }
