@@ -158,9 +158,9 @@ int main()
 		forCramer(temp, n, x, fun, d, i);
 	}
 
-	double* arrVal = new double[5];
-	double counter = 0;
-	for (int i = 0; i < 5; i++)
+	double* arrVal = new double[n + (n - 1)];
+	double counter = arrayForSLAY[0][0];
+	for (int i = 0; i < n + (n - 1); i++)
 	{
 		arrVal[i] = counter;
 		cout << counter << "  ";
@@ -168,7 +168,7 @@ int main()
 	}
 	cout << endl;
 
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < n + (n - 1); i++)
 	{
 		cout << P(x, n, arrVal[i]) << "  ";
 	}
