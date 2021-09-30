@@ -19,11 +19,7 @@ namespace task_2
             double x1 = l[0];
             double x2 = l[1];
 
-            if (x != xi)
-            {
-                return f * ((x - xi) * (x - x1) * (x - x2)) / ((xi - x1) * (xi - x2));
-            }
-            else return f * ((x - x1) * (x - x2)) / ((xi - x1) * (xi - x2));
+            return f * ((x - x1) * (x - x2)) / ((xi - x1) * (xi - x2));
         }
 
         static double Li(double x, double[] arrayOfX, double[] arrayOfF)
