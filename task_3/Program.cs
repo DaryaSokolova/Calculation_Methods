@@ -41,7 +41,7 @@ namespace task_3
             double res = arrOfY[0]; if (n == 1) return res;
             if (n >= 2)
             {
-                res += F4twoElem(arrOfX, arrOfY, arrOfX[0], arrOfX[1]) 
+                res += F4twoElem(arrOfX, arrOfY, arrOfX[0], arrOfX[1])
                     * (x - arrOfX[0]);
                 if (n == 2) return res;
             }
@@ -84,8 +84,27 @@ namespace task_3
             double counter = arrayOfX[0];
             for (int i = 0; i < n + (n - 1); i++)
             {
-                Console.Write( N(arrayOfX, arrayOfF, n, counter) + " ");
+                Console.Write(N(arrayOfX, arrayOfF, n, counter) + " ");
                 counter += 0.5;
+            }
+
+            Console.WriteLine();
+            if (n >= 1)
+            {
+                Console.Write("f[x0] = " + arrayOfF[0] + " ");
+                if (n >= 2)
+                {
+                    Console.Write("f[x0,x1] = " + F4twoElem(arrayOfX, arrayOfF, 0, 1) + " ");
+
+                    if (n >= 3)
+                    {
+
+                        for (int i = 3; i < n + 1; i++)
+                        {
+                            Console.Write("f[x0,x1,x2]= " + F4threeElem(arrayOfX, arrayOfF, n) + " ");
+                        }
+                    }
+                }
             }
         }
     }
