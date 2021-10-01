@@ -91,17 +91,17 @@ namespace task_3
             Console.WriteLine();
             if (n >= 1)
             {
-                Console.Write("f[x0] = " + arrayOfF[0] + " ");
+                Console.WriteLine("n = 1: " + arrayOfF[0] + " ");
                 if (n >= 2)
                 {
-                    Console.Write("f[x0,x1] = " + F4twoElem(arrayOfX, arrayOfF, 0, 1) + " ");
+                    Console.WriteLine("n = 2: " + F4twoElem(arrayOfX, arrayOfF, 0, 1) + " ");
 
                     if (n >= 3)
                     {
 
                         for (int i = 3; i < n + 1; i++)
                         {
-                            Console.Write("f[x0,x1,x2]= " + F4threeElem(arrayOfX, arrayOfF, n) + " ");
+                            Console.WriteLine("n = " + i + ": " + F4threeElem(arrayOfX, arrayOfF, n) + " ");
                         }
                     }
                 }
